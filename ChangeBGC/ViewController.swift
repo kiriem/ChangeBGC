@@ -106,6 +106,20 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    func labelColorWhite(){
+        redLabel.textColor = UIColor.whiteColor();
+        greenLabel.textColor = UIColor.whiteColor();
+        blueLabel.textColor = UIColor.whiteColor();
+        alphaLabel.textColor = UIColor.whiteColor();
+    }
+    
+    func labelColorBlack(){
+        redLabel.textColor = UIColor.blackColor();
+        greenLabel.textColor = UIColor.blackColor();
+        blueLabel.textColor = UIColor.blackColor();
+        alphaLabel.textColor = UIColor.blackColor();
+    }
+    
     func changeColor(sender:UISlider){
         
         switch sender.tag{
@@ -124,31 +138,23 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = UIColor(red: red, green: green, blue:blue, alpha: alpha);
         
-        if red < 0.5 && blue < 0.5 && green < 0.5{
-            redLabel.textColor = UIColor.whiteColor();
-            greenLabel.textColor = UIColor.whiteColor();
-            blueLabel.textColor = UIColor.whiteColor();
-            alphaLabel.textColor = UIColor.whiteColor();
+        if red <= 0.5 && blue <= 0.5 && green <= 0.5{
+            labelColorWhite();
         }else{
-            redLabel.textColor = UIColor.blackColor();
-            greenLabel.textColor = UIColor.blackColor();
-            blueLabel.textColor = UIColor.blackColor();
-            alphaLabel.textColor = UIColor.blackColor();
+            labelColorBlack();
         }
         
+        if red >= 0.5 && blue >= 0.5 && green >= 0.5 && alpha <= 0.5{
+            labelColorWhite();
+        }
         
+    /*
         if alpha <= 0.5{
-            redLabel.textColor = UIColor.whiteColor();
-            greenLabel.textColor = UIColor.whiteColor();
-            blueLabel.textColor = UIColor.whiteColor();
-            alphaLabel.textColor = UIColor.whiteColor();
+            labelColorWhite();
         }else{
-            redLabel.textColor = UIColor.blackColor();
-            greenLabel.textColor = UIColor.blackColor();
-            blueLabel.textColor = UIColor.blackColor();
-            alphaLabel.textColor = UIColor.blackColor();
+            labelColorBlack();
         }
-        
+     */
         println(red);
         println(blue);
         println(green);

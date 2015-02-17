@@ -405,6 +405,7 @@
 				0986A3141A91F46100C8B853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0986A3151A91F46100C8B853 /* Build configuration list for PBXNativeTarget "ChangeBGCTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				0986A3171A91F46100C8B853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
